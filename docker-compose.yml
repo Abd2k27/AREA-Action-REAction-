@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  client_web:
+    container_name: area_client_web
+    build: ./flutter_area
+    image: area_client_web
+    volumes:
+      - db:/var/lib/client_web
+    ports:
+      - "8081:8081"
+    depends_on:
+      - server
+
+  client_mobile:
+    container_name: area_client_mobile
+    build: ./flutter_area
+    image: area_client_mobile
+    volumes:
+      - db:/var/lib/client_mobile
+    depends_on:
+      - server
+
+  server:
+    container_name: area_server
+    image: area_server
+    build: ./server
+    ports:
+      - "8080:8080"
+    env_file:
+      - ./server/.env
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    container_name: area_db
+    image: mongo:latest
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    volumes:
+      - db:/data/db
+
+volumes:
+  db:
