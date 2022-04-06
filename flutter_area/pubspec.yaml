@@ -1,0 +1,45 @@
+name: explore
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  carousel_slider: ^4.0.0-nullsafety.0
+  easy_dynamic_theme: ^2.0.0
+  firebase_core: ^1.12.0
+  firebase_auth: ^3.3.7
+  google_sign_in: ^5.2.3
+  http: ^0.13.4
+  url_launcher: ^6.0.9
+  dio: ^4.0.4
+  provider: ^6.0.2
+  cached_network_image: ^3.2.0
+  shared_preferences:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Regular.ttf
+
+    - family: Electrolize
+      fonts:
+        - asset: fonts/Electrolize-Regular.ttf
+
+  assets:
+    - assets/images/
