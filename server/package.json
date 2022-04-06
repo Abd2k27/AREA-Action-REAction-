@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "User Management with MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-modules --es-module-specifier-resolution=node index.js",
+    "dev": "nodemon index.js",
+    "test": "npm run test"
+  },
+  "keywords": [
+    "mongodb",
+    "api",
+    "user_management"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/oauth-app": "^3.6.0",
+    "@octokit/rest": "^18.12.0",
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "ip": "^1.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12",
+    "mongoose-findorcreate": "^3.0.0",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.2",
+    "octokit": "^1.7.1",
+    "passport": "^0.5.0",
+    "passport-github-oauth20": "^1.0.4",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "passport-oauth2-refresh": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "nodemon": "^2.0.15"
+  }
+}
